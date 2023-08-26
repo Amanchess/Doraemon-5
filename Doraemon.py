@@ -49,15 +49,31 @@ public class DoraemonChessGame extends JFrame {
     }
 
     private String getDoraemonAsciiPiece(boolean isWhitePiece, int row, int col) {
-        // Replace with your Doraemon-themed ASCII art for white pieces
-        // Example: return isWhitePiece ? "D" : "d";
-        return ".";
+        String[] doraemonPieces = {
+            "R", "N", "B", "Q", "K", "B", "N", "R",
+            "P", "P", "P", "P", "P", "P", "P", "P",
+            ".", ".", ".", ".", ".", ".", ".", ".",
+            ".", ".", ".", ".", ".", ".", ".", ".",
+            ".", ".", ".", ".", ".", ".", ".", ".",
+            ".", ".", ".", ".", ".", ".", ".", ".",
+            "P", "P", "P", "P", "P", "P", "P", "P",
+            "R", "N", "B", "Q", "K", "B", "N", "R"
+        };
+        return doraemonPieces[isWhitePiece ? col : BOARD_SIZE - 1 - col];
     }
 
     private String getShinchanAsciiPiece(boolean isWhitePiece, int row, int col) {
-        // Replace with your Shinchan-themed ASCII art for black pieces
-        // Example: return isWhitePiece ? "S" : "s";
-        return ".";
+        String[] shinchanPieces = {
+            "R", "N", "B", "Q", "K", "B", "N", "R",
+            "P", "P", "P", "P", "P", "P", "P", "P",
+            ".", ".", ".", ".", ".", ".", ".", ".",
+            ".", ".", ".", ".", ".", ".", ".", ".",
+            ".", ".", ".", ".", ".", ".", ".", ".",
+            ".", ".", ".", ".", ".", ".", ".", ".",
+            "p", "p", "p", "p", "p", "p", "p", "p",
+            "r", "n", "b", "q", "k", "b", "n", "r"
+        };
+        return shinchanPieces[isWhitePiece ? col : BOARD_SIZE - 1 - col];
     }
 
     public static void main(String[] args) {
